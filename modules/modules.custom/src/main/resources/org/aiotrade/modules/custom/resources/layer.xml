@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+
+    <!-- The files and folders that are declared here, will be copied from archive
+         to disk under <userdir>/config/ only when they are modified and saved. -->
+    <!-- Register aiotrade.conf file under ../config/ -->
+    <file name="aiotrade.conf" url="aiotrade.conf"/>
+    
+    <folder name="UserOptions">
+        <file name="DefaultContent.xml" url="DefaultContent.xml"/>
+    </folder>
+
+    <folder name="DataServers">
+        <file name="YahooQuote.instance">
+            <attr name="instanceClass" methodvalue="org.aiotrade.lib.dataserver.yahoo.YahooQuoteServer.getSingleton"/>
+        </file>
+        <file name="YahooTicker.instance">
+            <attr name="instanceCreate" methodvalue="org.aiotrade.lib.dataserver.yahoo.YahooTickerServer.getSingleton"/>
+        </file>
+    </folder>
+
+</filesystem>

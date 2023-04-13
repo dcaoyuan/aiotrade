@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <file name="org-aiotrade-modules-ui-options-general-MarketNewsAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-LoadAllQuotesFromRemoteAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-AddExchangeSymbolsAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-AddSymbolAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-AddStatisticChartAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-ChangeStatisticChartOptsAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-StartSelectedWatchAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-StopSelectedWatchAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-ZoomOutAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-ZoomInAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchCursorAcceleratedAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchHideShowCursorCrossAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchCalendarTradingTimeViewAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchCandleOhlcAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchLinearLogScaleAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchAdjustQuoteAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwichAnalysisReaTimeAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-RemoveCompareQuoteChartsAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-PickIndicatorAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-ChangeOptsAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SwitchHideShowDrawingLineAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-PickDrawingLineAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-RemoveDrawingLineAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-OpenExplorerAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-OpenMultipleChartsAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-OnlineHelpAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SymbolLookupHelpAction.instance"/>
+        <file name="org-aiotrade-modules-ui-actions-SaveToImageAction.instance"/>
+        <!--file name="org-aiotrade-modules-ui-actions-SaveToCustomSizeImageAction.instance"/-->
+    </folder>
+
+    <folder name="Menu">
+        <folder name="File">
+            <file name="LoadAllQuotesFromRemoteAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-LoadAllQuotesFromRemoteAction.instance"/>
+                <attr name="position" intvalue="100"/>
+            </file>
+            <!--file name="AddSymbolAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-AddSymbolAction.instance"/>
+                <attr name="position" intvalue="100"/>
+        </file-->
+        </folder>
+        <folder name="Window">
+            <file name="OpenExplorerAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-OpenExplorerAction.instance"/>
+                <attr name="position" intvalue="100"/>
+            </file>
+        </folder>
+        <folder name="Help">
+            <file name="OnlineHelpAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-OnlineHelpAction.instance"/>
+                <attr name="position" intvalue="100"/>
+            </file>
+        </folder>
+
+    </folder>
+
+    <folder name="Toolbars">
+        <file name="File_hidden"/>
+        <file name="UndoRedo_hidden"/>
+
+        <folder name="View">
+            <attr name="position" intvalue="318"/>
+            <file name="org-aiotrade-modules-ui-actions-AddSymbolAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-AddSymbolAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-ZoomOutAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-ZoomOutAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-ZoomInAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-ZoomInAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchCursorAcceleratedAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchCursorAcceleratedAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchNatualTradingTimeViewAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchCalendarTradingTimeViewAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchCandleOhlcAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchCandleOhlcAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchHideShowCursorCrossAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchHideShowCursorCrossAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchLinearLogScaleAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchLinearLogScaleAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwichAnalysisReaTimeAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwichAnalysisReaTimeAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchAdjustQuoteAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchAdjustQuoteAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SaveToImageAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SaveToImageAction.instance"/>
+            </file>
+            <attr name = "SystemFileSystem.localizingBundle"
+                  stringvalue="org.aiotrade.modules.ui.resources.Bundle"/>
+            <!--file name="org-aiotrade-modules-ui-actions-SaveToCustomSizeImageAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SaveToCustomSizeImageAction.instance"/>
+            </file-->
+        </folder>
+
+        <folder name="Indicator">
+            <attr name="position" intvalue="328"/>
+            <file name="org-aiotrade-modules-ui-actions-PickIndicatorAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-PickIndicatorAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-ChangeOptsAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-ChangeOptsAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-AddStatChartAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-AddStatisticChartAction.instance"/>
+            </file>
+            <attr name = "SystemFileSystem.localizingBundle"
+                  stringvalue="org.aiotrade.modules.ui.resources.Bundle"/>
+        </folder>
+
+        <folder name="Draw">
+            <attr name="position" intvalue="338"/>
+            <file name="org-aiotrade-modules-ui-actions-PickDrawingLineAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-PickDrawingLineAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-RemoveDrawingLineAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-RemoveDrawingLineAction.instance"/>
+            </file>
+            <file name="org-aiotrade-modules-ui-actions-SwitchHideShowDrawingLineAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchHideShowDrawingLineAction.instance"/>
+            </file>
+            <attr name = "SystemFileSystem.localizingBundle"
+                  stringvalue="org.aiotrade.modules.ui.resources.Bundle"/>
+        </folder>
+
+        <folder name="QuickSearch">
+            <attr name="position" intvalue="700"/>
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.aiotrade.modules.ui.Bundle"/>
+            <file name="org-aiotrade-modules-quicksearch-QuickSearchAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/Edit/org-aiotrade-modules-quicksearch-QuickSearchAction.instance"/>
+                <attr name="position" intvalue="250"/>
+            </file>
+        </folder>
+
+    </folder>
+
+    <!--
+    http://bits.netbeans.org/dev/javadoc/org-openide-util/org/openide/util/Utilities.html#stringToKey(java.lang.String)
+    http://java.sun.com/j2se/1.5.0/docs/api/java/awt/event/KeyEvent.html
+
+    Construct a new key description from a given universal string description. Provides mapping between Emacs-like textual key descriptions and the KeyStroke object used in Swing.
+    This format has following form:
+
+    [C][A][S][M]-identifier
+
+    Where:
+
+        C stands for the Control key
+        A stands for the Alt key
+        S stands for the Shift key
+        M stands for the Meta key
+    
+    The format also supports two wildcard codes, to support differences in platforms. These are the preferred choices for registering keystrokes, since platform conflicts will automatically be handled:
+        D stands for the default menu accelerator - the Control key on most platforms, the Command (meta) key on Macintosh
+        O stands for the alternate accelerator - the Alt key on most platforms, the Ctrl key on Macintosh (Macintosh uses Alt as a secondary shift key for composing international characters 
+        - if you bind Alt-8 to an action, a mac user with a French keyboard will not be able to type the [ character, which is a significant handicap
+    
+    If you use the wildcard characters, and specify a key which will conflict with keys the operating system consumes, it will be mapped to whichever choice can work - for example, on Macintosh, Command-Q is always consumed by the operating system, so D-Q will always map to Control-Q.
+    Every modifier before the hyphen must be pressed. identifier can be any text constant from KeyEvent but without the leading VK_ characters. So KeyEvent.VK_ENTER is described as ENTER.
+    -->
+    <folder name="Shortcuts">
+        <file name="O-A.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-AddExchangeSymbolsAction.instance"/>
+        </file>
+        <file name="O-N.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-AddSymbolAction.instance"/>
+        </file>
+        <file name="O-B.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchCandleOhlcAction.instance"/>
+        </file>
+        <file name="ESCAPE.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchHideShowCursorCrossAction.instance"/>
+        </file>
+        <file name="O-L.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-PickDrawingLineAction.instance"/>
+        </file>
+        <file name="O-D.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchHideShowDrawingLineAction.instance"/>
+        </file>
+        <file name="DELETE.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-RemoveDrawingLineAction.instance"/>
+        </file>
+        <file name="O-I.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-PickIndicatorAction.instance"/>
+        </file>
+        <file name="O-P.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-ChangeOptsAction.instance"/>
+        </file>
+        <file name="O-T.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwitchCalendarTradingTimeViewAction.instance"/>
+        </file>
+        <file name="O-S.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-AddStatisticChartAction.instance"/>
+        </file>
+        <file name="F5.shadow">
+            <attr name="originalFile" stringvalue="Actions/org-aiotrade-modules-ui-actions-SwichAnalysisReaTimeAction.instance"/>
+        </file>
+    </folder>
+
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="ExplorerTopComponent.settings" url="ExplorerTopComponent.xml"/>
+            <file name="SignalTopComponent.settings" url="SignalTopComponent.xml"/>
+        </folder>
+        
+        <folder name="Modes">
+            <!-- It's better to do not redefine/override 'editor' mode, otherwise it's difficult to arrange editor type mode -->
+            <file name="explorer.wsmode" url="explorer.wsmode"/>
+            <folder name="explorer">
+                <file name="ExplorerTopComponent.wstcref" url="ExplorerTopComponent_1.xml"/>
+            </folder>
+
+            <file name="chart.wsmode" url="chart.wsmode"/>
+            <folder name="chart"/>
+
+            <file name="info.wsmode" url="info.wsmode"/>
+            <folder name="info"/>
+
+            <file name="board.wsmode" url="board.wsmode"/>
+            <folder name="board"/>
+
+            <file name="signal.wsmode" url="signal.wsmode"/>
+            <folder name="signal">
+                <file name="SignalTopComponent.wstcref" url="SignalTopComponent_1.xml"/>
+            </folder>
+        </folder>
+    </folder>
+
+    <folder name="OptionsDialog">
+        <!-- GeneralOptionsCategory have been included in NetBeans Platform
+        <file name="General.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.modules.ui.options.general.GeneralOptionsCategory"/>
+            <attr name="position" intvalue="100"/>
+        </file>
+        -->
+
+        <file name="ColorFontOptions.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.modules.ui.options.colors.ColorFontOptionsCategory"/>
+            <attr name="position" intvalue="200"/>
+        </file>
+    </folder>
+
+    <folder name="HandledCharts">
+        <file name="StraightLine.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.StraightLineHandledChart"/>
+        </file>
+        <file name="StraightLineSegment.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.StraightLineSegmentHandledChart"/>
+        </file>
+        <file name="PolyStraightLineSegmentHandledChart.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.PolyStraightLineSegmentHandledChart"/>
+        </file>
+        <file name="Parallel.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.ParallelLinesHandledChart"/>
+        </file>
+        <file name="FibonacciTimeZones.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.FibonacciTimeZonesHandledChart"/>
+        </file>
+        <file name="FibonacciArcs.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.FibonacciArcsHandledChart"/>
+        </file>
+        <file name="FibonacciFanLines.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.FibonacciFanLinesHandledChart"/>
+        </file>
+        <file name="GannAngle.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.GannAngleHandledChart"/>
+        </file>
+        <file name="GannPeriods.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.GannPeriodsHandledChart"/>
+        </file>
+        <file name="FibonacciRetracements.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.FibonacciRetracementsHandledChart"/>
+        </file>
+        <file name="FibonacciVerticalRetracements.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.FibonacciVerticalRetracementsHandledChart"/>
+        </file>
+        <file name="Percent.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.PercentHandledChart"/>
+        </file>
+        <file name="Periods.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.PeriodsHandledChart"/>
+        </file>
+        <file name="Text.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.charting.chart.handledchart.TextHandledChart"/>
+        </file>
+    </folder>
+
+    <folder name="DescriptorGroups">
+        <file name="IndicatorGroupDescriptor.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.modules.ui.nodes.IndicatorGroupDescriptor"/>
+        </file>
+        <file name="DrawingGroupDescriptor.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.modules.ui.nodes.DrawingGroupDescriptor"/>
+        </file>
+    </folder>
+
+    <!-- The files and folders that are declared here, will be copied from archive
+         to disk under <userdir>/config/ only when they are modified and saved. -->
+    <!-- Tell the loader to create "symbols" folder at ../config/ -->
+    <folder name="symbols"/>
+    
+    <folder name="UserOptions">
+        <file name="aiotrade.properties" url="aiotrade.properties"/>
+        <folder name="Template">
+            <file name="preview.csv" url="preview.csv"/>
+        </folder>
+    </folder>
+
+
+    <folder name="Indicators">
+        <file name="VOL.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.VOLIndicator"/>
+        </file>
+        <file name="INFO.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.InfoPointIndicator"/>
+        </file>
+        <file name="MA.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.MAIndicator"/>
+        </file>
+        <file name="MP.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.HVDIndicator"/>
+        </file>
+        <file name="EMA.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.EMAIndicator"/>
+        </file>
+        <file name="BOLL.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.BOLLIndicator"/>
+        </file>
+        <file name="BIAS.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.BIASIndicator"/>
+        </file>
+        <file name="DMI.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.DMIIndicator"/>
+        </file>
+        <file name="KD.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.KDIndicator"/>
+        </file>
+        <file name="MACD.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.MACDIndicator"/>
+        </file>
+        <file name="MTM.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.MTMIndicator"/>
+        </file>
+        <file name="OBV.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.OBVIndicator"/>
+        </file>
+        <file name="ROC.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.ROCIndicator"/>
+        </file>
+        <file name="RSI.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.RSIIndicator"/>
+        </file>
+        <file name="WMS.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.WMSIndicator"/>
+        </file>
+        <file name="SAR.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.SARIndicator"/>
+        </file>
+        <file name="CCI.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.CCIIndicator"/>
+        </file>
+        <file name="MFI.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.MFIIndicator"/>
+        </file>
+        <file name="ARBR.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.ARBRIndicator"/>
+        </file>
+        <file name="GMMA.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.GMMAIndicator"/>
+        </file>
+        <file name="ZIGZAG.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.ZIGZAGIndicator"/>
+        </file>
+        <!--file name="ZIGZAGFA.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.ZIGZAGFAIndicator"/>
+        </file-->
+        <file name="MACDSignal.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.indicator.basic.signal.MACDSignal"/>
+        </file>
+
+    </folder>
+
+    <folder name="QuickSearch">
+        <folder name="Actions_hidden"/>
+        <folder name="Help_hidden"/>
+        <folder name="GoToOption_hidden"/>
+        <folder name="Recent_hidden"/>
+        <folder name="Symbols">
+            <attr name="command" stringvalue="s"/>
+            <attr name="position" intvalue="0"/>
+            <file name="org-aiotrade-modules-ui-quicksearch-SymbolSearchProvider.instance">
+                <attr name="displayName" bundlevalue="org.aiotrade.modules.ui.Bundle#QuickSearch/Symbols/org-aiotrade-modules-ui-quicksearch-SymbolSearchProvider.instance"/>
+            </file>
+        </folder>
+        <folder name="Freqs">
+            <attr name="command" stringvalue="f"/>
+            <attr name="position" intvalue="1"/>
+            <file name="org-aiotrade-modules-ui-quicksearch-FreqSearchProvider.instance">
+                <attr name="displayName" bundlevalue="org.aiotrade.modules.ui.Bundle#QuickSearch/Freqs/org-aiotrade-modules-ui-quicksearch-FreqSearchProvider.instance"/>
+            </file>
+        </folder>
+    </folder>
+
+</filesystem>

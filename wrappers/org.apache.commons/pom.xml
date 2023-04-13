@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.aiotrade</groupId>
+        <artifactId>wrappers</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <!-- ***************************************************************************************************************
+    *
+    * Project description
+    *
+    **************************************************************************************************************** -->
+    <groupId>org.aiotrade</groupId>
+    <artifactId>org-apache-commons</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>nbm</packaging>
+    
+    <name>org-apache-commons-wrapper</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <configuration>
+                    <publicPackages>
+                        <publicPackage>org.apache.commons.beanutils</publicPackage>
+                        <publicPackage>org.apache.commons.beanutils.converters</publicPackage>
+                        <publicPackage>org.apache.commons.beanutils.expression</publicPackage>
+                        <publicPackage>org.apache.commons.beanutils.local</publicPackage>
+                        <publicPackage>org.apache.commons.beanutils.local.converters</publicPackage>
+                        <publicPackage>org.apache.commons.collections</publicPackage>
+                        <publicPackage>org.apache.commons.cli</publicPackage>
+                        <publicPackage>org.apache.commons.io</publicPackage>
+                        <publicPackage>org.apache.commons.io.comparatoe</publicPackage>
+                        <publicPackage>org.apache.commons.io.filefilter</publicPackage>
+                        <publicPackage>org.apache.commons.io.input</publicPackage>
+                        <publicPackage>org.apache.commons.io.output</publicPackage>
+                        <publicPackage>org.apache.commons.logging</publicPackage>
+                        <publicPackage>org.apache.commons.logging.impl</publicPackage>
+                        <publicPackage>org.apache.commons.pool</publicPackage>
+                        <publicPackage>org.apache.commons.pool.impl</publicPackage>
+                        <publicPackage>org.apache.commons.collections.map</publicPackage>
+                    </publicPackages>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+

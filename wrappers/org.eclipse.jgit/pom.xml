@@ -1,0 +1,74 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.aiotrade</groupId>
+        <artifactId>wrappers</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>jgit-repository</id>
+            <url>http://download.eclipse.org/jgit/maven</url>
+        </repository>
+        <repository>
+            <id>github-dcaoyuan</id>
+            <url>https://github.com/dcaoyuan/dcaoyuan-mvn-repo/raw/master/snapshots</url>
+        </repository>
+    </repositories>
+  
+    <artifactId>org-eclipse-jgit</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>nbm</packaging>
+    <name>org-eclipse-jgit-wrapper</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>${jgit.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <publicPackages>
+                        <publicPackage>org.eclipse.jgit</publicPackage>
+                        <publicPackage>org.eclipse.jgit.api</publicPackage>
+                        <publicPackage>org.eclipse.jgit.api.errors</publicPackage>
+                        <publicPackage>org.eclipse.jgit.diff</publicPackage>
+                        <publicPackage>org.eclipse.jgit.dircache</publicPackage>
+                        <publicPackage>org.eclipse.jgit.erros</publicPackage>
+                        <publicPackage>org.eclipse.jgit.events</publicPackage>
+                        <publicPackage>org.eclipse.jgit.fnmatch</publicPackage>
+                        <publicPackage>org.eclipse.jgit.ignore</publicPackage>
+                        <publicPackage>org.eclipse.jgit.lib</publicPackage>
+                        <publicPackage>org.eclipse.jgit.merge</publicPackage>
+                        <publicPackage>org.eclipse.jgit.notes</publicPackage>
+                        <publicPackage>org.eclipse.jgit.patch</publicPackage>
+                        <publicPackage>org.eclipse.jgit.revplot</publicPackage>
+                        <publicPackage>org.eclipse.jgit.revwalk</publicPackage>
+                        <publicPackage>org.eclipse.jgit.revwalk.filter</publicPackage>
+                        <publicPackage>org.eclipse.jgit.storage.file</publicPackage>
+                        <publicPackage>org.eclipse.jgit.storage.pack</publicPackage>
+                        <publicPackage>org.eclipse.jgit.transport</publicPackage>
+                        <publicPackage>org.eclipse.jgit.transport.resolver</publicPackage>
+                        <publicPackage>org.eclipse.jgit.treewalk</publicPackage>
+                        <publicPackage>org.eclipse.jgit.treewalk.filter</publicPackage>
+                        <publicPackage>org.eclipse.jgit.util</publicPackage>
+                        <publicPackage>org.eclipse.jgit.util.io</publicPackage>
+                    </publicPackages>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.aiotrade</groupId>
+        <artifactId>libs</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ***************************************************************************************************************
+    *
+    * Project description
+    *
+    **************************************************************************************************************** -->
+    <groupId>org.aiotrade</groupId>
+    <artifactId>lib-trading</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    <name>lib-trading</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-util</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-math</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-securities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-indicator</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-indicator-basic</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>javafxrt</artifactId>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <configuration>
+                    <launchers>
+                        <!-- mvn scala:run -Dlauncher=chart -->
+                        <launcher>
+                            <id>chart</id>
+                            <mainClass>org.aiotrade.lib.trading.charting.ChartReport</mainClass>
+                            <!-- args are optional. If you need/which to specify some additional arguments at call time, -->
+                            <!-- use "-DaddArgs=arg1|arg2|arg3" ('|' is used as separator) -->
+                            <args>
+                            </args>
+                        </launcher>
+                        <!-- mvn scala:run -Dlauncher=backtest -->
+                        <launcher>
+                            <id>backtest</id>
+                            <mainClass>org.aiotrade.lib.trading.TradingService</mainClass>
+                            <jvmArgs>
+                                <jvmArg>-Xmx2048m</jvmArg>
+                            </jvmArgs>
+                        </launcher>
+                    </launchers>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>
+

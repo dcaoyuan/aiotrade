@@ -1,0 +1,6 @@
+<nbm>
+    <!--moduleType>autoload</moduleType-->
+    <codeNameBase>org.aiotrade.lib.util/1</codeNameBase>
+    <licenseName>BSD License</licenseName>
+    <licenseFile>license.txt</licenseFile>
+</nbm>

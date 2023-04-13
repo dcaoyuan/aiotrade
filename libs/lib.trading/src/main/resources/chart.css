@@ -1,0 +1,58 @@
+/* 
+    Document   : chart
+    Created on : Mar 8, 2012, 9:30:53 PM
+    Author     : dcaoyuan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.chart-plot-background { -fx-background-color: #e8e6db; }
+
+.chart-vertical-grid-lines { 
+    -fx-stroke: #ffffff; 
+    -fx-stroke-width: 1;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #ffffff; 
+    -fx-stroke-width: 1;
+}
+
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.axis {
+    -fx-tick-label-fill: #000000;
+    -fx-font-family: Helvetica;
+}
+
+.axis-label {
+    -fx-font-family: Helvetica;
+    -fx-text-fill: #000000; 
+}
+
+.chart-series-line {    
+    -fx-stroke-width: 1px;
+    -fx-effect: null;
+}
+
+/*
+.default-color0.chart-series-line { -fx-stroke: #e9967a; }
+.default-color1.chart-series-line { -fx-stroke: #dda0dd; }
+.default-color2.chart-series-line { -fx-stroke: #0181e2; }
+.default-color3.chart-series-line { -fx-stroke: #f0e68c; }
+*/
+
+.default-color0.chart-series-line { -fx-stroke: #e07154; }
+.default-color1.chart-series-line { -fx-stroke: #650d99; }
+.default-color2.chart-series-line { -fx-stroke: #666666; }
+.default-color3.chart-series-line { -fx-stroke: #f6f648; }
+.default-color0.chart-series-line { -fx-stroke: #4a6892; }
+.default-color1.chart-series-line { -fx-stroke: #4a8a91; }
+.default-color2.chart-series-line { -fx-stroke: #513210; }
+.default-color3.chart-series-line { -fx-stroke: #a8c3a5; }
+.default-color0.chart-series-line { -fx-stroke: #185103; }
+.default-color1.chart-series-line { -fx-stroke: #b0875e; }
+.default-color2.chart-series-line { -fx-stroke: #a25563; }

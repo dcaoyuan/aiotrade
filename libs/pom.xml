@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.aiotrade</groupId>
+        <artifactId>aiotrade-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ***************************************************************************************************************
+    *
+    * Project description
+    *
+    **************************************************************************************************************** -->
+    <groupId>org.aiotrade</groupId>
+    <artifactId>libs</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>AIOTrade Org Libs</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-reflect</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-actors</artifactId>
+        </dependency>
+
+        <!-- testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-tools.testing</groupId>
+            <artifactId>specs_2.8.1</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <!-- ***************************************************************************************************************
+    *
+    *
+    *
+    **************************************************************************************************************** -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                    <reportPlugins>
+                        <plugin>
+                            <groupId>net.alchim31.maven</groupId>
+                            <artifactId>scala-maven-plugin</artifactId>
+                        </plugin>
+                    </reportPlugins>
+                </configuration>   
+            </plugin>     
+        </plugins>
+    </build>
+
+    <modules>
+        <module>lib.util</module>
+        <module>lib.json</module>
+        <module>lib.io</module>
+        <module>lib.math</module>
+        <module>lib.securities</module>
+        <module>lib.indicator</module>
+        <module>lib.charting</module>
+        <module>lib.view.securities</module>
+        <module>lib.indicator.basic</module>
+        <module>lib.dataserver.ib</module>
+        <module>lib.dataserver.yahoo</module>
+        <module>lib.dbfdriver</module>
+        <module>lib.amqp</module>
+        <module>lib.avro</module>
+        <module>helper.test</module>
+        <module>lib.sevenzip</module>
+        <!--module>lib.trading</module--> <!-- need javafx -->
+        <module>lib.neuralnetwork</module>
+		<module>lib.svm</module>
+        <module>../../configgy</module>
+        <module>../../circumflex/circumflex-orm</module>
+    </modules>
+    
+</project>

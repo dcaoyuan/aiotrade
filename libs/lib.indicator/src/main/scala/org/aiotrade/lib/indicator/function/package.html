@@ -1,0 +1,48 @@
+<!--
+   - Copyright (c) 2005-2006, AIOTrade Computing Co.
+   - 
+   - This program is free software; you can redistribute it and/or modify it under
+   - the terms of the GNU General Public License as published by the Free Software
+   - Foundation; either version 2 of the License, or any later version.
+   - 
+   - This program is distributed in the hope that it will be useful, but WITHOUT
+   - ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+   - FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+   - 
+   - You should have received a copy of the GNU General Public License along with 
+   - this program; if not, write to the Free Software Foundation, Inc., 59 Temple 
+   - Place, Suite 330, Boston, MA 02111-1307 USA
+  -->
+
+<html>
+<body>
+
+Design of Function of Technical Analysis
+
+<p>
+
+As the basic atom for indicator computation, the function design for TA should consider:
+<ul>
+<li>It can be computed <strong>at</strong> any idx or time point, whenever -- computeSpot(int idx) or computeSpot(long time)</li>
+<li>It can correspond to the Options change (Options are transfered in by the caller as reference)</li>
+<li>It can remember the status intermedial of function instance to avoid redundant computation. The status includes</li>
+  <ul>
+    <li>backward values (as it's a TimeSeries's variable)</li>
+    <li>the based Variables</li>
+	<li>the Options</li>
+	<li>the caller</li>
+  </ul>
+</ul>
+
+<p>
+
+Then an indicator instance can call it to:
+<ul>
+<li>compute from 'fromIdx' to 'toIdx'</li>
+<li>compute at point 'idx'</li>
+</ul>
+We can define an indicator's computing procedure as a computing session by provide a sessionId to it. The sessionId will also be the representer of function instance's caller mentioned above.
+
+<p>
+</body>
+</html>

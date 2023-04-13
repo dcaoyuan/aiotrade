@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mode version="2.3">
+  <name unique="info" />
+  <kind type="editor" />
+  <state type="joined" />
+  <constraints>
+    <path orientation="horizontal" number="40" weight="0.6"/>
+    <path orientation="vertical" number="30" weight="0.28"/>
+  </constraints>
+  <empty-behavior permanent="true"/>
+</mode>

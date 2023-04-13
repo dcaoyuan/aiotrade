@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="" default="" basedir=".">
+
+    <target name="fixcrlf">
+        <fixcrlf srcdir="./" includes="**,**/*" excludes="**/*.gif, **/*.png, **/*.jpg" eol="lf"/>
+    </target>
+    
+</project>

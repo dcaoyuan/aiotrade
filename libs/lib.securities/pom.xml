@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.aiotrade</groupId>
+        <artifactId>libs</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <!-- ***************************************************************************************************************
+    *
+    * Project description
+    *
+    **************************************************************************************************************** -->
+    <groupId>org.aiotrade</groupId>
+    <artifactId>lib-securities</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    <name>lib-securities</name>
+
+    <repositories>
+        <repository>
+            <id>jgit-repository</id>
+            <url>http://download.eclipse.org/jgit/maven</url>
+        </repository>
+    </repositories>
+   
+    <dependencies>
+
+        <dependency>
+            <groupId>ru.circumflex</groupId>
+            <artifactId>circumflex-orm</artifactId>
+            <version>${circumflex-orm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>${jgit.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-avro</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-util</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aiotrade</groupId>
+            <artifactId>lib-math</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- explicit inculde dependency on mysql jdbc -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <configuration>
+                    <launchers>
+                        <!-- mvn scala:run -Dlauncher=model -->
+                        <launcher>
+                            <id>model</id>
+                            <mainClass>org.aiotrade.lib.securities.model.Model</mainClass>
+                            <jvmArgs>
+                                <jvmArg>-Xmx512m</jvmArg>
+                            </jvmArgs>
+                        </launcher>
+                        <!-- mvn scala:run -Dlauncher=data -Drun.mode=mysql -->
+                        <launcher>
+                            <id>data</id>
+                            <mainClass>org.aiotrade.lib.securities.model.data.Data</mainClass>
+                            <jvmArgs>
+                                <jvmArg>-Xmx512m</jvmArg>
+                            </jvmArgs>
+                            <args>
+                                <arg>src/main/resources/mysql.conf</arg>
+                            </args>
+                        </launcher>
+                        <!-- you could define other launcher -->
+                        <launcher>
+                            <id>sectormodel</id>
+                            <mainClass>org.aiotrade.lib.info.model.Model</mainClass>
+                            <args>
+                                <arg>src/main/resources/development.conf</arg>
+                            </args>
+                            <jvmArgs>
+                                <jvmArg>-Xmx512m</jvmArg>
+                            </jvmArgs>
+                        </launcher>
+                    </launchers>
+                </configuration>
+            </plugin>
+            
+        </plugins>
+
+        <resources>
+            <!--
+            @Note Since we have binary file under 'data':
+            Do not filter files with binary content like images! This will most likely result in corrupt output. 
+            If you have both text files and binary files as resources, you need to declare two mutually exclusive 
+            resource sets. The first resource set defines the files to be filtered and the other resource set defines 
+            the files to copy unaltered as illustrated below:
+            @see http://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html
+            -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- should enable filtering to get properites in active profile to be substitued in resources file -->
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.conf</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>**/*.conf</exclude>
+                    <exclude>**/*.properties</exclude>
+                    <exclude>**/*.xml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        
+    </build>
+
+    <profiles>
+        <profile>
+            <id>reclone-data</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>net.alchim31.maven</groupId>
+                        <artifactId>scala-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <configuration>
+                                    <launchers>
+                                        <launcher>
+                                            <id>git-clone-data</id>
+                                            <mainClass>org.aiotrade.lib.securities.data.Packaging</mainClass>
+                                            <args>
+                                                <arg>${basedir}/src/main/resources/data</arg>
+                                                <arg>https://github.com/dcaoyuan/aiotrade-data.git</arg> <!-- sourceUri -->
+                                                <arg>refs/heads/master</arg> <!-- the default branch that will be checkedout after clone -->
+                                            </args>
+                                        </launcher>
+                                    </launchers>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        
+        <profile>
+            <id>postgresql</id>
+            <activation>
+                <property>
+                    <name>db</name>
+                    <value>postgresql</value>
+                </property>
+            </activation>
+            <properties>
+                <orm.connection.driver>org.postgresql.Driver</orm.connection.driver>
+                <orm.connection.url>jdbc:postgresql://localhost:5432/aiotrade</orm.connection.url>
+                <orm.connection.username>root</orm.connection.username>
+                <orm.connection.password>aiotrade</orm.connection.password>
+                <orm.dialect>ru.circumflex.orm.PostgreSQLDialect</orm.dialect>
+                <orm.defaultSchema>orm</orm.defaultSchema>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <version>8.3-603.jdbc4</version>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>mysql</id>
+            <activation>
+                <property>
+                    <name>db</name>
+                    <value>mysql</value>
+                </property>
+            </activation>
+            <properties>
+                <orm.connection.driver>com.mysql.jdbc.Driver</orm.connection.driver>
+                <orm.connection.url>jdbc:mysql://127.0.0.1:3306/aiotrade?useUnicode=true</orm.connection.url>
+                <orm.connection.username>root</orm.connection.username>
+                <orm.connection.password></orm.connection.password>
+                <orm.dialect>ru.circumflex.orm.MySQLDialect</orm.dialect>
+                <orm.defaultSchema>orm</orm.defaultSchema>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>mysql-remote</id>
+            <activation>
+                <property>
+                    <name>db</name>
+                    <value>mysql-remote</value>
+                </property>
+            </activation>
+            <properties>
+                <orm.connection.driver>com.mysql.jdbc.Driver</orm.connection.driver>
+                <orm.connection.url>jdbc:mysql://192.168.4.189:3306/faster?useUnicode=true</orm.connection.url>
+                <orm.connection.username>faster</orm.connection.username>
+                <orm.connection.password>faster</orm.connection.password>
+                <orm.dialect>ru.circumflex.orm.MySQLDialect</orm.dialect>
+                <orm.defaultSchema>orm</orm.defaultSchema>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>mysql-fd</id>
+            <activation>
+                <property>
+                    <name>db</name>
+                    <value>mysql-fd</value>
+                </property>
+            </activation>
+            <properties>
+                <orm.connection.driver>com.mysql.jdbc.Driver</orm.connection.driver>
+                <orm.connection.url>jdbc:mysql://192.168.132.220:3306/faster?useUnicode=true</orm.connection.url>
+                <orm.connection.username>root</orm.connection.username>
+                <orm.connection.password></orm.connection.password>
+                <orm.dialect>ru.circumflex.orm.MySQLDialect</orm.dialect>
+                <orm.defaultSchema>orm</orm.defaultSchema>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>h2</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>db</name>
+                    <value>h2</value>
+                </property>
+            </activation>
+            <properties>
+                <orm.connection.driver>org.h2.Driver</orm.connection.driver>
+                <orm.connection.url>jdbc:h2:~/.aiotrade/dev/db/aiotrade</orm.connection.url>
+                <orm.connection.username>sa</orm.connection.username>
+                <orm.connection.password></orm.connection.password>
+                <orm.dialect>ru.circumflex.orm.H2Dialect</orm.dialect>
+                <orm.defaultSchema>orm</orm.defaultSchema>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+</project>
+

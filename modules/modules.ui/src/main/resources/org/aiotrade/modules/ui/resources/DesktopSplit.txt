@@ -1,0 +1,50 @@
+  ---------------------------------------------
+  |          |                     |          |
+  | Explorer |        Editor       | Realtime |
+  |          |                     |          |
+  |          |---------------------|          |
+  |          |                     |          |
+  |          |       Analysis      |          |
+  |          |                     |          |
+  |          |                     |          |
+  |          |                     |          |
+  ---------------------------------------------
+
+
+
+
+          Explorer
+          |
+          |         Editor
+DESKTOP---S1   S3---|
+          |    |    Analysis
+          |    |
+          S2---|
+               |
+               |
+               Realtime
+
+Mode Explorer:
+  <constraints>
+    <path orientation="horizontal" number="0" weight="0.2" />
+  </constraints>
+
+Mode Editor:
+  <constraints>
+    <path orientation="horizontal" number="1" weight="0.8" />
+    <path orientation="horizontal" number="0" weight="0.7" />
+    <path orientation="vertical" number="0" weight="0.3" />
+  </constraints>
+
+Mode Analysis:
+  <constraints>
+    <path orientation="horizontal" number="1" weight="0.8" />
+    <path orientation="horizontal" number="0" weight="0.7" />
+    <path orientation="vertical" number="1" weight="0.7" />
+  </constraints>
+
+Mode Realtime:
+  <constraints>
+    <path orientation="horizontal" number="1" weight="0.8" />
+    <path orientation="horizontal" number="1" weight="0.3" />
+  </constraints>

@@ -1,0 +1,14 @@
+
+<nbm>
+   <!--moduleType>autoload</moduleType-->
+    <codeNameBase>org.aiotrade.modules.platform.i10n/1</codeNameBase>
+    <licenseName>BSD License</licenseName>
+    <licenseFile>license.txt</licenseFile>
+
+    <nbmResources>
+        <nbmResource>
+            <baseDirectory>src/main/locale</baseDirectory>
+            <relativeClusterPath>.</relativeClusterPath>
+        </nbmResource>
+    </nbmResources>
+</nbm>

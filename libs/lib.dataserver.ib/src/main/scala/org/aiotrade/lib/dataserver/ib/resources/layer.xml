@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.1//EN" "http://www.netbeans.org/dtds/filesystem-1_1.dtd">
+<filesystem>
+    <folder name="Actions">
+        <file name="org-aiotrade-platform-modules-dataserver-ib-netbeans-actions-IBConnectAction.instance"/>
+    </folder>
+    
+    <folder name="Toolbars">
+        <folder name="Indicator">
+            <file name="org-aiotrade-platform-modules-dataserver-ib-netbeans-actions-IBConnectAction.shadow">
+                <attr name="originalFile" stringvalue="Actions/org-aiotrade-platform-modules-dataserver-ib-netbeans-actions-IBConnectAction.instance"/>
+            </file>
+        </folder>
+    </folder>
+    
+    <folder name="DataServers">
+        <file name="IBQuote.instance">
+            <attr name="instanceClass" stringvalue="org.aiotrade.lib.dataserver.ib.IBQuoteServer"/>
+        </file>
+        <file name="IBTicker.instance">
+            <attr name="instanceCreate" stringvalue="org.aiotrade.lib.dataserver.ib.IBTickerServer.getSingleton"/>
+        </file>
+    </folder>
+        
+</filesystem>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.aiotrade</groupId>
+        <artifactId>aiotrade-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ***************************************************************************************************************
+    *
+    * Project description
+    *
+    **************************************************************************************************************** -->
+    <groupId>org.aiotrade</groupId>
+    <artifactId>wrappers</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+    <name>AIOTrade Org Wrappers</name>
+
+    <licenses>
+        <license>
+            <name>BSD</name>
+            <url>http://www.opensource.org/licenses/bsd-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- ***************************************************************************************************************
+    *
+    *
+    *
+    **************************************************************************************************************** -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <!-- ***************************************************************************************************************
+    *
+    *
+    *
+    **************************************************************************************************************** -->
+    <modules>
+        <module>com.mysql.jdbc</module>
+        <module>com.h2database.h2</module>
+        <module>lib.amqp</module>
+        <module>lib.avro</module>
+        <module>lib.charting</module>
+        <module>lib.dataserver.ib</module>
+        <module>lib.dataserver.yahoo</module>
+        <module>lib.indicator</module>
+        <module>lib.indicator.basic</module>
+        <module>lib.io</module>
+        <module>lib.json</module>
+        <module>lib.math</module>
+        <module>lib.neuralnetwork</module>
+        <module>lib.securities</module>
+        <module>lib.sevenzip</module>
+		<module>lib.svm</module>
+        <module>lib.util</module>
+        <module>lib.view.securities</module>
+        <module>net.lag.configgy</module>
+        <module>org.apache.avro</module>
+        <module>org.apache.commons</module>
+        <module>org.dbunit</module>
+        <module>org.eclipse.jgit</module>
+        <module>org.scala-lang</module>
+        <module>org.slf4j</module>
+        <module>ru.circumflex.orm</module>
+    </modules>
+
+</project>

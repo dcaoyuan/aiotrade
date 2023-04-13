@@ -1,0 +1,15 @@
+name = High Contrast Look And Feel
+description = White on black
+iconMagnificationFactor = 1
+fontName = Dialog
+fontSize = 14
+backgroundColor = 000000
+foregroundColor = FFFFFF
+primaryColor1 = FFFFFF
+primaryColor2 = 000000
+primaryColor3 = 000000
+secondaryColor1 = FFFFFF
+secondaryColor2 = 808080
+secondaryColor3 = 000000
+selectionForeground = 000000
+selectionBackground = FFFFFF

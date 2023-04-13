@@ -1,0 +1,6 @@
+<nbm>
+    <!--moduleType>autoload</moduleType-->
+    <codeNameBase>org.apache.avro/1</codeNameBase>
+    <licenseName>Apache License</licenseName>
+    <licenseFile>license.txt</licenseFile>
+</nbm>

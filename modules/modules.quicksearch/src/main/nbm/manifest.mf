@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: org/aiotrade/modules/quicksearch/Bundle.properties
+OpenIDE-Module-Layer: org/aiotrade/modules/quicksearch/resources/layer.xml
+OpenIDE-Module-Public-Packages: org.aiotrade.spi.quicksearch.*

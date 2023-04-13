@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: org/aiotrade/modules/ui/Bundle.properties
+OpenIDE-Module-Layer: org/aiotrade/modules/ui/resources/layer.xml
+OpenIDE-Module-Install: org/aiotrade/modules/ui/Installer.class

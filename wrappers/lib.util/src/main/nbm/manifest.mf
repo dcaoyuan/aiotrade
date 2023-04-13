@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Name: org-aiotrade-lib-util
+OpenIDE-Module-Display-Category: aiotrade
+AutoUpdate-Show-In-Client: true
